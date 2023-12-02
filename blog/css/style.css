@@ -37,6 +37,8 @@
 
         Other
 
+            - :nth()-child (to target specific child elements)
+
             - :focus, :hover, :active (to target link states)
 
             - @font-face or @import (to import typefaces)
