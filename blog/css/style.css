@@ -1,0 +1,230 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid #c5c5c5;
+}
+
+.highlight {
+    color: #ff4081;
+}
+
+h1 {
+    font-weight: 800;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-weight: bolder;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    background-color: #ffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 20px;
+    display: inline-block;
+}
+
+/* Main content */
+main {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* Articles */
+article {
+    float: left;
+    width: 70%;
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.article-image img {
+    max-width: 100%;
+    float: left;
+    margin-right: 20px;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+/* Sidebar */
+aside {
+    float: right;
+    width: 25%;
+    margin-left: 5%;
+}
+
+aside img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.asterisks {
+    display: block; 
+    text-align: left; 
+    font-weight: bold; 
+    font-size: 24px; 
+    margin-top: 10px; 
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Buttons */
+button {
+    background-color: #ff4081;
+    color: white;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Images and captions within articles */
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Images at the bottom */
+.subsection {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Spacing above the image section */
+}
+
+.subsection figure {
+    flex: 1;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.subsection img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-right: 0;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    article, aside {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Adjust bottom images to stack on smaller screens */
+    .subsection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subsection figure {
+        width: auto; /* Allows image to take natural width */
+        max-width: 100%; /* Prevents image from exceeding screen width */
+        margin-bottom: 20px; /* Adds space between stacked images */
+    }
+}
+
